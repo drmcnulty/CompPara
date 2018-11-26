@@ -8,7 +8,7 @@
   </parent>
   <groupId>com.backpackaviation</groupId>
   <artifactId>CompPara</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>CompPara Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -35,6 +35,13 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        
+        <!-- for JSP views -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

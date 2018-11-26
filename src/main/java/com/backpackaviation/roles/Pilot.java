@@ -5,12 +5,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.backpackaviation.PilotState;
+import com.fasterxml.jackson.annotation.JsonView;
+
 @Entity
 public class Pilot {
 
+	@JsonView(View.Summary.class)
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	
+	@JsonView(View.Summary.class)
+	private PilotState status;
 	
 	private String name;
 	private String phone;
@@ -19,6 +26,14 @@ public class Pilot {
 	private String wingColors;
 	private String inReachTrackingLink;
 	private String spotTrackingLink;
+
+	public PilotState getStatus() {
+		return status;
+	}
+
+	public void setStatus(PilotState status) {
+		this.status = status;
+	}
 
 	public Integer getId() {
 		return id;
