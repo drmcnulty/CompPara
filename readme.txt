@@ -25,15 +25,22 @@ Note for returning summaries of pilots (for the grid view): https://stackoverflo
 TODO:
 [X] display status of pilot
 [X] create endpoint that gives pilot summaries-- just the number and status.
+[X] when a user clicks on a pilot status, they go to a page with more information about that pilot.
+[ ] Client must be aware of whether it is still connected to the Server, 
+	and notify the user if the connection is lost, attempt to re-establish connections
+	(Websocket)
+[ ] Hover over pilot number to get a hover-popup of next-priority info
+	[ ] set a field on each tidbit of info about a pilot indicating its priority?
+		such a system would allow the client code to discover the important info and
+		display it accordingly
 [ ] make colors not suck.
-[ ] when a user clicks on a pilot status, they go to a page with more information about that pilot.
-[ ] frontend must be aware of whether it is still connected to the backend, and notify the user if the connection is lost
 
 DESIGN ideas:
 -------------
 > Deployment vision:
 
 PRE-COMP:
+- Competition Director sets up MySql server (I'm using MariaDB)
 - Competition Director runs jar on server
 - Competition installs CompPara SMS forwarding app on phone
 - pilots all fill out their pilot cards, and are assigned a number (maybe let them choose number in future?)

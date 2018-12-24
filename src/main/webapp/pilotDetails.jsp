@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Pilot Details</title>
-<link href="/style.css" rel="stylesheet">
+<link href="/pilotDetails.css" rel="stylesheet">
 </head>
 <body>
   <script type="text/javascript">
